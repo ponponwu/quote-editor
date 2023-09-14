@@ -19,13 +19,13 @@ http {
         location / {
             proxy_pass https://www.google.com/;
         }
+
+        location /blog {
+            proxy_pass https://35.194.183.65;
+        }
         
         location /blog/ {
             rewrite ^/blog(/.*)$ $1 break;
-            proxy_pass https://35.194.183.65;
-        }
-
-        location /blog {
             proxy_pass https://35.194.183.65;
         }
     }
