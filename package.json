@@ -1,0 +1,19 @@
+{
+  "name": "quote-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vincent <vincent00406@zuyou.com.tw>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.19.2",
+    "sass": "^1.66.1"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "dependencies": {
+    "@hotwired/turbo-rails": "^7.3.0",
+    "dart-sass": "^1.25.0"
+  }
+}
