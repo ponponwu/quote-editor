@@ -15,10 +15,6 @@ http {
 
     server {
         listen <%= ENV["PORT"] %>;
-
-        location / {
-            proxy_pass https://zuyou.herokuapp.com/;
-        }
         
         location /blog/ {
             rewrite ^/blog(/.*)$ $1 break;
